@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'HOHODANG';
+    src: url('../fonts/HOHODANG-Regular.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HOHODANG';
+    src: url('../fonts/HOHODANG-Line.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}

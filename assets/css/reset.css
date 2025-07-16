@@ -1,0 +1,107 @@
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+:root {
+    /* color */
+    --primary-white: #ffffff;
+    --primary-black: #000000;
+    --font-r: 500;
+    --font-l: 400;
+
+    --page-bg : #FAF9F5;
+
+    --box-shadow: rgba(0, 0, 0, 0.25) -2px 3px 90px -20px !important;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+}
+
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    cursor: grab;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+fieldset,
+input {
+    border: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+section {
+    position: relative;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+  
+body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    word-break: keep-all;
+    font-family: "HOHODANG","Pretendard", sans-serif !important;
+    /* letter-spacing: -0.025em; */
+    /* line-height: 1.2; */
+    overflow-x: hidden;
+    font-weight: var(--font-r);
+
+}
+.btn{
+    cursor: grab !important;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.side_bottom--block .side_bottom--right::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Edge */
+}
+
+@media screen and (max-width:992px) {
+    body {
+        -ms-overflow-style: none;
+        /* IE & Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    body::-webkit-scrollbar {
+        display: none !important;
+        /* Safari & Chrome */
+        scrollbar-width: none !important;
+    }
+
+}
