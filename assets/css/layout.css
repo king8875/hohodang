@@ -26,6 +26,9 @@ body:not(.home) header,
 body:not(.home) footer {
     background-color: #FAF9F5;
 }
+body:not(.home) .footer_content{
+    border-top: 1px solid #000;
+}
 body:not(.home) .header_content{
     border-bottom: 1px solid #000;
 } 
@@ -299,6 +302,10 @@ body{
 }
 
 @media screen and (max-width:1375px) {
+
+    body:not(.home) .footer_content .footer_right--block .footer_util--list{
+        border-top: 1px solid #000;
+    }
     .header_content{
         padding-top: 30px;
         border: none;

@@ -22,3 +22,14 @@
 .z-index3 {
     z-index: 3 !important;
 }
+
+.br-m{
+    display: none;
+}
+
+
+@media screen and (max-width:992px) {
+    .br-m {
+        display: block;
+    }
+}

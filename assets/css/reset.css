@@ -74,7 +74,7 @@ body {
     word-break: keep-all;
     font-family: "HOHODANG","Pretendard", sans-serif !important;
     /* letter-spacing: -0.025em; */
-    /* line-height: 1.2; */
+    line-height: 1.2;
     overflow-x: hidden;
     font-weight: var(--font-r);
 

@@ -595,7 +595,13 @@
                 footerHidden.style.display = 'flex';
                 footerHidden01.style.display = 'flex';
             }
-
+            function closeSidebar01() {
+                sidebar.classList.remove('open');
+                closeBtn.classList.remove('visible');
+                menuBtn.classList.remove('hidden');
+                footerHidden.style.display = 'flex';
+                footerHidden01.style.display = 'flex';
+            }
             // ✅ ❗️빠졌던 부분 — 여는 버튼에 이벤트 바인딩
             menuBtn.addEventListener('click', openSidebar);
             closeBtn.addEventListener('click', closeSidebar);
@@ -603,7 +609,7 @@
             // ✅ 화면 사이즈 커지면 사이드바 닫기
             window.addEventListener('resize', function () {
                 if (window.innerWidth >= 1375) {
-                    closeSidebar();
+                    closeSidebar01();
                 }
             });
         });

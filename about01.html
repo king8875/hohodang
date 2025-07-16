@@ -321,9 +321,42 @@
 
 
     <main>
-        <section>
+        <section class="about_section">
             <div class="inner">
-                fds
+                <div class="about_content">
+                    <div class="big_menu--area">
+                        <a href="">hohodang</a>
+                    </div>
+                    <div class="sub_menu--area">
+                        <ul class="sub_menu--list">
+                            <li class="active">
+                                <a href="">company</a>
+                            </li>
+                            <li>
+                                <a href="">timeline</a>
+                            </li>
+                            <li>
+                                <a href="">ceo message</a>
+                            </li>
+                            <li>
+                                <a href="">hohodang design lab</a>
+                            </li>
+                            <li>
+                                <a href="">hohodang factory</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content--area">
+                        <h3>“HUMBLE YET NOBLE,<br class="br-m" /> TRADITIONAL YET CONTEMPORARY”</h3>
+                        <p>
+                            호호당은 한국인의 지혜와 단정한 아름다움을 기억합니다.<br />
+                            2010년 설립 이래, 오래된 이야기와 전통을 오늘날에 끊임없이 배달하여 소박하지만 기품있는 삶의 방식을 이어가고 있습니다.
+                        </p>
+                        <div class="img--block">
+                            <img src="/assets/img/hoho_img01.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -598,7 +631,13 @@
                 footerHidden.style.display = 'flex';
                 footerHidden01.style.display = 'flex';
             }
-
+            function closeSidebar01() {
+                sidebar.classList.remove('open');
+                closeBtn.classList.remove('visible');
+                menuBtn.classList.remove('hidden');
+                footerHidden.style.display = 'flex';
+                footerHidden01.style.display = 'flex';
+            }
             // ✅ ❗️빠졌던 부분 — 여는 버튼에 이벤트 바인딩
             menuBtn.addEventListener('click', openSidebar);
             closeBtn.addEventListener('click', closeSidebar);
@@ -606,9 +645,15 @@
             // ✅ 화면 사이즈 커지면 사이드바 닫기
             window.addEventListener('resize', function () {
                 if (window.innerWidth >= 1375) {
-                    closeSidebar();
+                    closeSidebar01()
                 }
             });
+
+
+    
+
+
+
         });
     </script>
 
