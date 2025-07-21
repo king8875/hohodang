@@ -331,7 +331,9 @@ body{
 .header_util--wrapper--m{
     display: none;
 }
-
+.footer_logo svg{
+    stroke: none !important;
+}
 @media screen and (max-width:1375px) {
 
     body:not(.home) .footer_content .footer_right--block .footer_util--list{
