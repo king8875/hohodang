@@ -26,8 +26,14 @@
 .br-m{
     display: none;
 }
-
-
+.mw-740{
+    max-width: 740px;
+}
+.fx-box{
+    display: flex;
+    gap: 30px;
+    height: 533px;
+}
 @media screen and (max-width:992px) {
     .br-m {
         display: block;
