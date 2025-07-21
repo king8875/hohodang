@@ -229,6 +229,37 @@ body{
 
 
 
+
+
+
+
+
+/* pagination */
+.pagination--area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0 120px 0;
+}
+.pagination--area .page-numbers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: grab;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* footer css */
 .footer{}
 .footer_content{

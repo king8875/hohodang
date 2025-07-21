@@ -29,6 +29,9 @@
 .mw-740{
     max-width: 740px;
 }
+.mb-130{
+    margin-bottom: 130px;
+}
 .fx-box{
     display: flex;
     gap: 30px;
