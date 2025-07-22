@@ -15,12 +15,19 @@ body.home footer
 body.home header a,
 body.home header svg,
 body.home footer a,
-body.home footer svg,
+/* body.home footer svg, */
 body.home footer p{
     color: white;
-    stroke: white; /* SVG stroke 색 */
 }
-  
+body.home .svg_white{
+    display: block;
+}
+body.home .svg_black{
+    display: none;
+}
+
+
+
   /* 그 외 페이지(header 배경 흰색 + 텍스트 검은색) */
 body:not(.home) header,
 body:not(.home) footer {
@@ -33,14 +40,25 @@ body:not(.home) .header_content{
     border-bottom: 1px solid #000;
 } 
 body:not(.home) header a,
-body:not(.home) header svg,
-body:not(.home) header svg path,
-body:not(.home) footer a,
-body:not(.home) footer svg,
-body:not(.home) footer svg path {
+/* body:not(.home) header svg, */
+/* body:not(.home) header svg path, */
+body:not(.home) footer a
+/* body:not(.home) footer svg, */
+/* body:not(.home) footer svg path  */
+{
     color: black;
-    stroke: black;
 }
+body:not(.home) .svg_white{
+    display: none;
+}
+body:not(.home) .svg_black{
+    display: block;
+}
+
+
+
+
+
 /*  */
 body{
     display: flex;
@@ -92,6 +110,7 @@ body{
     display: block;
     font-size: 15px;
     text-transform: uppercase;
+    font-family: var(--hoho);
 }
 .header_content .header_nav--list .menu-item .sub-menu{
     position: absolute;
@@ -123,6 +142,7 @@ body{
 }
 .header_content .header_util--list li a p{
     font-size: 14px;
+    font-weight: var(--font-r);
 }
 
 
@@ -277,9 +297,9 @@ body{
     margin-left: 10px;
     font-size: 13px;
     text-decoration: underline;
-    font-family: "Pretendard" !important;
 }
 .footer_content .footer_left--block div p{
+    font-weight: var(--font-r);
     font-size: 15px;
 }
 .footer_content .footer_left--block div .img--block{
@@ -306,6 +326,7 @@ body{
     min-width: 20px;
 }
 .footer_content .footer_right--block .footer_util--list li a p{
+    font-weight: var(--font-r);
     font-size: 14px;
 }
 
@@ -316,6 +337,7 @@ body{
     gap: 15px;
 }
 .footer_right--block .footer_sns--block p{
+    font-weight: var(--font-r);
     font-size: 14px;
 }
 .footer_right--block .footer_sns--block .sns--list{
@@ -334,6 +356,38 @@ body{
 .footer_logo svg{
     stroke: none !important;
 }
+
+
+.lang_ic,
+.shop_ic,
+.search_ic,
+.sb_btn{
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+.shop_ic svg,
+.lang_ic svg,
+.search_ic svg,
+.sb_btn svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:1375px) {
 
     body:not(.home) .footer_content .footer_right--block .footer_util--list{
@@ -354,6 +408,7 @@ body{
         display: block;
     }
     .header_lang--m{
+        font-size: 14px;
         color: #fff;
     }
     .header_lang--m a,
@@ -416,6 +471,7 @@ body{
         background: #000;
     }
     .footer_content .footer_right--block .footer_util--list li a p{
+        font-weight: var(--font-m);
         color: #000;
     }
     .footer_content .footer_left--block div p{

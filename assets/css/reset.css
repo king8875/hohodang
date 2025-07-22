@@ -4,12 +4,18 @@
     /* color */
     --primary-white: #ffffff;
     --primary-black: #000000;
-    --font-r: 500;
-    --font-l: 400;
+    /* --font-l: 400; */
     --font-sb : 600;
+    --font-m : 500;
+    --font-r: 400;
     --font-pr : 300;
 
     
+
+    --hoho : "HOHODANG";
+    --pre : "Pretendard";
+
+
     --page-bg : #FAF9F5;
 
     --box-shadow: rgba(0, 0, 0, 0.25) -2px 3px 90px -20px !important;
@@ -75,7 +81,7 @@ body {
     flex-direction: column;
     position: relative;
     word-break: keep-all;
-    font-family: "HOHODANG","Pretendard", sans-serif !important;
+    font-family: "Pretendard", "HOHODANG", sans-serif !important;
     /* letter-spacing: -0.025em; */
     line-height: 1.2;
     overflow-x: hidden;
