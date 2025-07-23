@@ -80,6 +80,7 @@ body {
     line-height: 1.67;
     overflow-x: hidden;
     font-weight: var(--font-r);
+    background: #000;
 }
 .btn{
     cursor: grab !important;

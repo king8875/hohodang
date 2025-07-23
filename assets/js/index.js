@@ -1,63 +1,67 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // ✅ 드롭다운
-    const dropdowns = document.querySelectorAll('.lang-dropdown');
+// document.addEventListener('DOMContentLoaded', function () {
 
-    dropdowns.forEach(dropdown => {
-        const toggle = dropdown.querySelector('.lang-toggle');
+//     // ✅ 드롭다운
+//     const dropdowns = document.querySelectorAll('.lang-dropdown');
 
-        if (toggle) {
-            toggle.addEventListener('click', function (e) {
-                e.preventDefault();
+//     dropdowns.forEach(dropdown => {
+//         const toggle = dropdown.querySelector('.lang-toggle');
 
-                dropdowns.forEach(d => {
-                    if (d !== dropdown) d.classList.remove('open');
-                });
+//         if (toggle) {
+//             toggle.addEventListener('click', function (e) {
+//                 e.preventDefault();
 
-                dropdown.classList.toggle('open');
-            });
-        }
-    });
+//                 dropdowns.forEach(d => {
+//                     if (d !== dropdown) d.classList.remove('open');
+//                 });
 
-    document.addEventListener('click', function (e) {
-        dropdowns.forEach(dropdown => {
-            if (!dropdown.contains(e.target)) {
-                dropdown.classList.remove('open');
-            }
-        });
-    });
+//                 dropdown.classList.toggle('open');
+//             });
+//         }
+//     });
 
-    // ✅ 사이드바
-    const body = document.body;
-    const menuBtn = document.querySelector('.sb_btn');
-    const sidebar = document.getElementById('sidebar');
-    const closeBtn = document.querySelector('.close--btn');
-    const headerBg = document.querySelector('.header');
-    const footerHidden = document.querySelector('.footer_content .footer_left--block');
-    const footerHidden01 = document.querySelector('.footer_right--block .footer_sns--block');
-    const headerContent = document.querySelector('.header_content');
+//     document.addEventListener('click', function (e) {
+//         dropdowns.forEach(dropdown => {
+//             if (!dropdown.contains(e.target)) {
+//                 dropdown.classList.remove('open');
+//             }
+//         });
+//     });
 
-    function toggleSidebar(open) {
-        if (!sidebar || !menuBtn || !closeBtn || !footerHidden || !footerHidden01 || !headerBg) return;
+//     // ✅ 사이드바
+//     const body = document.body;
+//     const menuBtn = document.querySelector('.sb_btn');
+//     const sidebar = document.getElementById('sidebar');
+//     const closeBtn = document.querySelector('.close--btn');
+//     const headerBg = document.querySelector('.header');
+//     const footerHidden = document.querySelector('.footer_content .footer_left--block');
+//     const footerHidden01 = document.querySelector('.footer_right--block .footer_sns--block');
+//     const headerContent = document.querySelector('.header_content');
 
-        sidebar.classList.toggle('open', open);
-        closeBtn.classList.toggle('visible', open);
-        menuBtn.classList.toggle('hidden', open);
-        footerHidden.style.display = open ? 'none' : 'flex';
-        footerHidden01.style.display = open ? 'none' : 'flex';
-        headerBg.classList.toggle('active', open);
-        if (!body.classList.contains('home')) {
-            if (headerContent) {
-                headerContent.style.borderBottom = open ? 'none' : '1px solid #000';
-            }
-        }
-    }
+//     function toggleSidebar(open) {
+//         if (!sidebar || !menuBtn || !closeBtn || !footerHidden || !footerHidden01 || !headerBg) return;
 
-    menuBtn?.addEventListener('click', () => toggleSidebar(true));
-    closeBtn?.addEventListener('click', () => toggleSidebar(false));
+//         sidebar.classList.toggle('open', open);
+//         closeBtn.classList.toggle('visible', open);
+//         menuBtn.classList.toggle('hidden', open);
+//         footerHidden.style.display = open ? 'none' : 'flex';
+//         footerHidden01.style.display = open ? 'none' : 'flex';
+//         headerBg.classList.toggle('active', open);
+//         if (!body.classList.contains('home')) {
+//             if (headerContent) {
+//                 headerContent.style.borderBottom = open ? 'none' : '1px solid #000';
+//             }
+//         }
+//     }
 
-    window.addEventListener('resize', () => {
-        if (window.innerWidth >= 1375) {
-            toggleSidebar(false);
-        }
-    });
-});
+//     menuBtn?.addEventListener('click', () => toggleSidebar(true));
+//     closeBtn?.addEventListener('click', () => toggleSidebar(false));
+
+//     window.addEventListener('resize', () => {
+//         if (window.innerWidth >= 1375) {
+//             toggleSidebar(false);
+//         }
+//     });
+
+
+
+// });

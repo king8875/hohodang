@@ -404,6 +404,10 @@ body{
 
         border-top: 1px solid #000;
     }
+    body:not(.home) .footer_content{
+        padding: 27px 0 20px 0;
+        border-top: 1px solid #000;
+    }
     .header_content .header_logo .logo_link{
         width: 100px;
     }
