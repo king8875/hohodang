@@ -209,6 +209,9 @@ body{
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; /* iOS 스크롤 부드럽게 */
     z-index: 2;
+
+    scrollbar-width: none;          /* Firefox */
+    -ms-overflow-style: none;       /* IE 10+ */
 }
 
 .sidebar.open {
@@ -381,7 +384,7 @@ body{
     width: 20px;
     height: 20px;
 }
-.shop_ic svg,
+/* .shop_ic svg,
 .lang_ic svg,
 .search_ic svg,
 .sb_btn svg{
@@ -389,7 +392,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 
 
 
@@ -454,7 +457,7 @@ body{
         justify-content: space-between;
         align-items: flex-end;
         width: 100%;
-        padding-bottom: 50px;
+        padding-bottom: 47px;
 
     }
     .only-pc{
@@ -514,7 +517,7 @@ body{
     }
     .footer_right--block .footer_sns--block .sns--list{
         position: absolute;
-        top: -10px;
+        top: -16px;
         right: 0;
     }
 }
