@@ -101,10 +101,7 @@ main {
 .sub_menu--area .sub_menu--list li a.active{
     opacity: 1;
 }
-/* .company_tx{
-    font-size: 15px;
-    font-weight: var(--font-r);
-} */
+
 .content--area{
     flex: 1;
     display: flex;
@@ -211,7 +208,7 @@ main {
 
 /* ceo */
 .ceo_content--area{
-    margin-bottom: 120px;
+    /* margin-bottom: 120px; */
 }
 
 .name-tx{
@@ -225,7 +222,10 @@ main {
     margin-bottom: 120px;
 }
 
-
+/* designlab */
+.designlab_section{
+    margin-bottom: 120px;
+}
 
 
 /* factory */
@@ -287,7 +287,7 @@ main {
   
   .iframe-wrapper {
     position: relative;
-    width: 50vw;
+    width: 70vw;
     aspect-ratio: 16 / 9;
 }
   
@@ -318,6 +318,7 @@ main {
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: grab;
 }
 .store_link--btn p{
     font-weight: var(--font-sb);
@@ -391,7 +392,7 @@ main {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,auto);
-    gap: 60px;
+    gap: 30px;
 }
 .project--list .project--item{
     position: relative;
@@ -572,7 +573,7 @@ main {
  
     .content--area .company_tx{
         font-size: 14px;
-        margin-bottom: 40px;
+        margin-bottom: 25px;
     }
   
     .content--area h3{
@@ -591,7 +592,18 @@ main {
         gap: 10px;
         margin-bottom: 60px;
     }
-
+    /* ceo */
+    .content--area .ceo_img{
+        margin-bottom: 60px;
+        aspect-ratio: 16 / 9;
+    }
+    .name-tx{
+        margin-bottom: 25px;
+    }
+    /* designlab */
+    .designlab_section{
+        margin-bottom: 60px;
+    }
     /* fac */
     .about_content.temp2{
         margin-top: 40px;
@@ -608,7 +620,22 @@ main {
         font-size: 14px;
         margin-bottom: 40px;
     }
-
+    .fac--list .fac--item .fac-right--block .video--block{
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+    .fac--list .fac--item .fac-right--block .video--block .play_ic img{
+        transform: scale(0.8);
+    }
+    /* youtube overlay */
+    .iframe-wrapper {
+        width: 95vw;
+    }
+    /* brands page */
+    .fac-right--block .brands_img{
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
     /* project */
     .project--list{
         display: grid;
@@ -619,6 +646,7 @@ main {
         padding-top: 30px;
     }
     .project--list .img--block {
+        aspect-ratio: 16 / 9;
         width: 100%;
         max-height: 500px;
         overflow: hidden;
