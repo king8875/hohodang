@@ -7,6 +7,7 @@
     <title>mainpage</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/layout.css">
+    <script src="assets/js/index.js"></script>
 </head>
 
 <body class="home">
@@ -186,7 +187,7 @@
                     <div class="header_util--wrapper--m">
                         <div class="btn">
                             <a href="">
-                                <div class="search_ic"> 
+                                <div class="search_ic">
                                     <img class="svg_white" src="assets/img/svg/search_ic.svg" alt="검색아이콘">
                                     <img class="svg_black" src="assets/img/svg/searchblack_ic.svg" alt="검색아이콘">
                                 </div>
@@ -223,15 +224,15 @@
                             <span>
                                 <a class="more_tx" href="">
                                     더 알아보기</a>
-                                </span>
-                            </p>
+                            </span>
+                        </p>
                     </div>
                     <div class="visible_m">
                         <div class="img--block">
                             <a href="">
                                 <img class="svg_white" src="assets/img/svg/grs_ic.svg" alt="">
                                 <img class="svg_black" src="assets/img/svg/grsblack_ic.svg" alt="">
-                                    
+
                             </a>
                         </div>
                     </div>
@@ -309,85 +310,85 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+      
+      
+        // document.addEventListener('DOMContentLoaded', function () {
 
-            // ✅ 드롭다운
-            const dropdowns = document.querySelectorAll('.lang-dropdown');
+        //     // ✅ 드롭다운
+        //     const dropdowns = document.querySelectorAll('.lang-dropdown');
 
-            dropdowns.forEach(function (dropdown) {
-                const toggle = dropdown.querySelector('.lang-toggle');
+        //     dropdowns.forEach(function (dropdown) {
+        //         const toggle = dropdown.querySelector('.lang-toggle');
 
-                toggle.addEventListener('click', function (e) {
-                    e.preventDefault();
+        //         toggle.addEventListener('click', function (e) {
+        //             e.preventDefault();
 
-                    dropdowns.forEach(d => {
-                        if (d !== dropdown) d.classList.remove('open');
-                    });
+        //             dropdowns.forEach(d => {
+        //                 if (d !== dropdown) d.classList.remove('open');
+        //             });
 
-                    dropdown.classList.toggle('open');
-                });
-            });
+        //             dropdown.classList.toggle('open');
+        //         });
+        //     });
 
-            document.addEventListener('click', function (e) {
-                dropdowns.forEach(function (dropdown) {
-                    if (!dropdown.contains(e.target)) {
-                        dropdown.classList.remove('open');
-                    }
-                });
-            });
+        //     document.addEventListener('click', function (e) {
+        //         dropdowns.forEach(function (dropdown) {
+        //             if (!dropdown.contains(e.target)) {
+        //                 dropdown.classList.remove('open');
+        //             }
+        //         });
+        //     });
 
-            // ✅ 사이드바 관련
-            const body = document.querySelector('body');
-            const toggleBtn = document.getElementById('sidebarToggle');
-            const menuBtn = document.querySelector('.sb_btn');
-            const sidebar = document.getElementById('sidebar');
-            const headerBg = document.querySelector('.header');
-            const closeBtn = document.querySelector('.close--btn');
-            const footerHidden = document.querySelector('.footer_content .footer_left--block');
-            const footerHidden01 = document.querySelector('.footer_right--block .footer_sns--block');
-            const svgBlack = document.querySelectorAll('.svg_black');
+        //     // ✅ 사이드바 관련
+        //     const body = document.querySelector('body');
+        //     const toggleBtn = document.getElementById('sidebarToggle');
+        //     const menuBtn = document.querySelector('.sb_btn');
+        //     const sidebar = document.getElementById('sidebar');
+        //     const headerBg = document.querySelector('.header');
+        //     const closeBtn = document.querySelector('.close--btn');
+        //     const footerHidden = document.querySelector('.footer_content .footer_left--block');
+        //     const footerHidden01 = document.querySelector('.footer_right--block .footer_sns--block');
+        //     const svgBlack = document.querySelectorAll('.svg_black');
 
-            function openSidebar() {
-                sidebar.classList.add('open');
-                // body.classList.remove('home');
-                closeBtn.classList.add('visible');
-                menuBtn.classList.add('hidden');
-                footerHidden.style.display = 'none';
-                footerHidden01.style.display = 'none';
-                headerBg.classList.add('active');
-            }
+        //     function openSidebar() {
+        //         sidebar.classList.add('open');
+        //         closeBtn.classList.add('visible');
+        //         menuBtn.classList.add('hidden');
+        //         footerHidden.style.display = 'none';
+        //         footerHidden01.style.display = 'none';
+        //         headerBg.classList.add('active');
+        //     }
 
-            function closeSidebar() {
-                sidebar.classList.remove('open');
-                closeBtn.classList.remove('visible');
-                // body.classList.add("home");
-                menuBtn.classList.remove('hidden');
-                footerHidden.style.display = 'flex';
-                footerHidden01.style.display = 'flex';
-                headerBg.classList.remove('active');
+        //     function closeSidebar() {
+        //         sidebar.classList.remove('open');
+        //         closeBtn.classList.remove('visible');
+        //         menuBtn.classList.remove('hidden');
+        //         footerHidden.style.display = 'flex';
+        //         footerHidden01.style.display = 'flex';
+        //         headerBg.classList.remove('active');
 
-            }
-            function closeSidebar01() {
-                sidebar.classList.remove('open');
-                closeBtn.classList.remove('visible');
-                menuBtn.classList.remove('hidden');
-                footerHidden.style.display = 'flex';
-                footerHidden01.style.display = 'flex';
-                headerBg.classList.remove('active');
+        //     }
+        //     // 강제로 화면을 늘려서 사이드바가 닫혔을때
+        //     function closeSidebar01() {
+        //         sidebar.classList.remove('open');
+        //         closeBtn.classList.remove('visible');
+        //         menuBtn.classList.remove('hidden');
+        //         footerHidden.style.display = 'flex';
+        //         footerHidden01.style.display = 'flex';
+        //         headerBg.classList.remove('active');
+        //     }
 
-            }
-            
-            // ✅ ❗️빠졌던 부분 — 여는 버튼에 이벤트 바인딩
-            menuBtn.addEventListener('click', openSidebar);
-            closeBtn.addEventListener('click', closeSidebar);
+        //     // ✅ ❗️빠졌던 부분 — 여는 버튼에 이벤트 바인딩
+        //     menuBtn.addEventListener('click', openSidebar);
+        //     closeBtn.addEventListener('click', closeSidebar);
 
-            // ✅ 화면 사이즈 커지면 사이드바 닫기
-            window.addEventListener('resize', function () {
-                if (window.innerWidth >= 1375) {
-                    closeSidebar01();
-                }
-            });
-        });
+        //     // ✅ 화면 사이즈 커지면 사이드바 닫기
+        //     window.addEventListener('resize', function () {
+        //         if (window.innerWidth >= 1375) {
+        //             closeSidebar01();
+        //         }
+        //     });
+        // });
     </script>
 
 </body>
