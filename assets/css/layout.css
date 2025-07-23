@@ -15,7 +15,6 @@ body.home footer
 body.home header a,
 body.home header svg,
 body.home footer a,
-/* body.home footer svg, */
 body.home footer p{
     color: white;
 }
@@ -25,6 +24,7 @@ body.home .svg_white{
 body.home .svg_black{
     display: none;
 }
+
 
 
 
@@ -40,11 +40,7 @@ body:not(.home) .header_content{
     border-bottom: 1px solid #000;
 } 
 body:not(.home) header a,
-/* body:not(.home) header svg, */
-/* body:not(.home) header svg path, */
 body:not(.home) footer a
-/* body:not(.home) footer svg, */
-/* body:not(.home) footer svg path  */
 {
     color: black;
 }
@@ -54,8 +50,19 @@ body:not(.home) .svg_white{
 body:not(.home) .svg_black{
     display: block;
 }
-
-
+/* 메인페이지에서 사이드바 열렸을때 */
+body.home .header.active .svg_black{
+    display: block;
+}
+body.home .header:not(.active) .svg_black{
+    display: none;
+}
+body.home .header.active .svg_white{
+    display: none;
+}
+body.home .header.active a{
+    color: #000;
+}
 
 
 
@@ -78,6 +85,7 @@ body{
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 52px 0 23px 0;
     border-bottom: 1px solid #fff;
@@ -165,9 +173,10 @@ body{
 
 .lang-options li a {
     display: block;
-    padding: 8px 12px;
+    padding: 8px 20px;
     text-decoration: none;
     color: #333 !important;
+    font-family: var(--hoho);
 }
 
 .lang-options li a:hover {
@@ -208,8 +217,11 @@ body{
 
 
 .sidebar > ul {
-    padding: 150px 40px 0px 40px;
+    padding: 180px 40px 0px 40px;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .sidebar > ul > li > a {
@@ -217,7 +229,7 @@ body{
     border-bottom: 1px solid #fff;
 }
 .sidebar > ul > li > .sub-menu {
-    margin: 20px 0;
+    margin: 20px 0 0 0;
 }
 .sidebar > ul > li > .sub-menu .menu-item > a {
     font-size: 14px;
@@ -229,7 +241,8 @@ body{
 }
 .sidebar ul li a {
     display: block;
-    padding: 10px 0;
+    padding-bottom: 5px;
+    font-family: var(--hoho);
     
 }
 
@@ -237,10 +250,13 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 40px 0;
+    margin: 20px 0 60px 0;
 }
 
 .close--btn{
+    width: 20px;
+    height: 20px;
+    padding: 1px;
     display: none;
 }
 .close--btn.visible{
@@ -391,10 +407,14 @@ body{
 @media screen and (max-width:1375px) {
 
     body:not(.home) .footer_content .footer_right--block .footer_util--list{
+
         border-top: 1px solid #000;
     }
+    .header_content .header_logo .logo_link{
+        width: 100px;
+    }
     .header_content{
-        padding-top: 30px;
+        padding: 22px 0 20px 0;
         border: none;
     }
     .header_content .header_nav--list{
@@ -427,9 +447,9 @@ body{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         width: 100%;
-        padding-bottom: 40px;
+        padding-bottom: 50px;
 
     }
     .footer_content .footer_left--block div{
@@ -444,6 +464,8 @@ body{
         position: fixed;
         bottom: 0;
         left: 0;
+        display: flex;
+        flex-direction: row-reverse;        
         width: 100%;
         gap: 0;
 
@@ -451,23 +473,29 @@ body{
     .footer_content .footer_right--block .footer_util--list li{
         position: relative;
         flex: 1;
-        background: #FAF9F5;
+        background: #fff;
     }
     .footer_content .footer_right--block .footer_util--list li a{
         padding: 15px 0;
         justify-content: center;
     }
-    .footer_content .footer_right--block .footer_util--list li a .subs_ic svg path{
-        stroke: #000;
+    .footer_content .footer_right--block .footer_util--list li:first-child a{
+        gap: 5px;
+    }
+    .footer_content .footer_right--block .footer_util--list li a .subs_ic .svg_white{
+        display: none;
+    }
+    .footer_content .footer_right--block .footer_util--list li a .subs_ic .svg_black{
+        display: block;
     }
     .footer_content .footer_right--block .footer_util--list li:first-child::after{
         content: "";
         position: absolute;
         top: 50%;
-        right: 0;
+        left: 0;
         transform: translateY(-50%);
         width: 1px; 
-        height: 50%;
+        height: 18px;
         background: #000;
     }
     .footer_content .footer_right--block .footer_util--list li a p{

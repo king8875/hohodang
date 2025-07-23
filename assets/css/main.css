@@ -389,14 +389,16 @@ main {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    font-size: 16px;
     line-height: 1.6;
     color: #fff;
 }
 .project--list .project--item .tx--block strong{
-    font-weight: bold;
+    font-weight: var(--font-sb);
+    font-size: 16px;
 }
-
+.project--list .project--item .tx--block p{
+    font-size: 13px;
+}
 .project--list .img--block::before{
     content: '';
     position: absolute;

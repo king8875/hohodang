@@ -4,17 +4,13 @@
     /* color */
     --primary-white: #ffffff;
     --primary-black: #000000;
-    /* --font-l: 400; */
     --font-sb : 600;
     --font-m : 500;
     --font-r: 400;
     --font-pr : 300;
 
-    
-
     --hoho : "HOHODANG";
     --pre : "Pretendard";
-
 
     --page-bg : #FAF9F5;
 
@@ -38,7 +34,6 @@ button {
 
 a {
     text-decoration: none;
-    cursor: grab;
 }
 
 table {
@@ -82,11 +77,9 @@ body {
     position: relative;
     word-break: keep-all;
     font-family: "Pretendard", "HOHODANG", sans-serif !important;
-    /* letter-spacing: -0.025em; */
-    line-height: 1.2;
+    line-height: 1.67;
     overflow-x: hidden;
     font-weight: var(--font-r);
-
 }
 .btn{
     cursor: grab !important;
