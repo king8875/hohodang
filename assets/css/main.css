@@ -257,7 +257,6 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    cursor: grab;
 }
 .fac--list .fac--item .fac-right--block .video--block video{
     filter: brightness(80%);
@@ -332,9 +331,11 @@ main {
     transition: width 0.4s ease;
 }
 /* 애니메이션 넣고싶으면 */
-/* .store_link--btn p:hover::before {
-    width: 0;
-} */
+.store_link--btn p:hover::before {
+    /* width: 0; */
+    animation: lineAni .4s;
+    animation-duration: 0.7s;
+}
 
 
 /* toke */
@@ -347,10 +348,17 @@ main {
     gap: 100px;
     margin-bottom: 120px;
 }
-.toke--list .toke--item{
+.toke--list .toke--item{ }
+.toke--list .toke--item a{
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+.toke--list .toke--item a:hover .toke-bot img{
+    transform: scale(1.1);
+}
+.toke--list .toke--item a:hover .toke-top .line::before{
+    transition: all .4s;
 }
 .toke-top{
     display: flex;
@@ -365,9 +373,32 @@ main {
 .toke-top .img--block img{
     transform: translateY(5px);
 }
+.toke-top .line{
+    position: relative;
+    transition: all .4s;
+
+}
+.toke-top .line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0%;
+    background-color: var(--primary-black);
+    transition: all .4s ease;
+}
+.toke--list .toke--item a:hover .toke-top .line::before {
+    width: 100%;
+}
+.toke-bot .img--block{
+    transition: all .4s ease;
+    overflow: hidden;
+}
 .toke-bot img{
     width: 100%;
     height: 100%;
+    transition: all .4s ease;
 }
 
 
@@ -720,4 +751,15 @@ main {
     }
 
   
+}
+
+
+@keyframes lineAni {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+    
 }
