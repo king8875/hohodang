@@ -1,18 +1,18 @@
-
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
 :root {
     /* color */
     --primary-white: #ffffff;
     --primary-black: #000000;
-    --font-sb : 600;
-    --font-m : 500;
+    --font-sb: 600;
+    --font-m: 500;
     --font-r: 400;
-    --font-pr : 300;
+    --font-pr: 300;
 
-    --hoho : "HOHODANG";
-    --pre : "Pretendard";
+    --hoho: "HOHODANG";
+    --pre: "Pretendard";
 
-    --page-bg : #FAF9F5;
+    --page-bg: #FAF9F5;
 }
 
 
@@ -68,7 +68,7 @@ body {
     height: 100%;
     margin: 0;
 }
-  
+
 body {
     display: flex;
     flex-direction: column;
@@ -80,15 +80,27 @@ body {
     font-weight: var(--font-r);
     background: #000;
 }
-.btn{
+
+.btn {
     cursor: grab !important;
 }
+
 body::-webkit-scrollbar {
     display: none;
 }
+
 .side_bottom--block .side_bottom--right::-webkit-scrollbar {
     display: none;
     /* Chrome, Safari, Edge */
+}
+
+body.page-fade {
+    opacity: 0;
+    transition: opacity 0.6s ease-in;
+}
+
+body.page-fade.fade-in {
+    opacity: 1;
 }
 
 @media screen and (max-width:992px) {
