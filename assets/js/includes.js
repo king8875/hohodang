@@ -132,5 +132,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelectorAll(".line").forEach(el => {
         el.style.width = "100%";
-      });
+    });
 });
