@@ -5,31 +5,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const body = document.body;
     const isHome = body.classList.contains('home');
     const logoLoader = document.querySelector('.main-logo-loader');
-  
-    body.classList.add('page-fade');
-  
+    
+    if (!isHome) {
+      body.classList.add('page-fade');
+    }
+    
     if (isHome && logoLoader) {
       // 메인페이지: 로고 먼저 보여줌
       logoLoader.classList.add('show');
-  
+    
       setTimeout(() => {
         // 로고 사라지기
         logoLoader.classList.remove('show');
         logoLoader.classList.add('hide');
-  
+    
         // 본문 fade-in
         body.classList.add('fade-in');
-  
-        // 애니메이션 끝난 후 DOM에서 제거 (선택사항)
-      
-      }, 1500); // 로고 보여주는 시간
+    
+        // 필요시 로고 DOM 제거
+        // logoLoader.remove();
+      }, 1000); // 로고 보여주는 시간 (1초)
     } else {
       // 그 외 페이지는 바로 fade-in
       requestAnimationFrame(() => {
         body.classList.add('fade-in');
       });
     }
-
 
 
 
