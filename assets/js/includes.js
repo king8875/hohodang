@@ -2,18 +2,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     
-    
     const body = document.body;
-    
-    // body에 home 클래스가 없으면 fade 애니메이션 적용
-    if (!body.classList.contains('home')) {
-      body.classList.add('page-fade');
+    const isHome = body.classList.contains('home');
+    const logoLoader = document.querySelector('.main-logo-loader');
   
-      // 강제로 렌더링 한 프레임 뒤에 fade-in 적용
+    body.classList.add('page-fade');
+  
+    if (isHome && logoLoader) {
+      // 메인페이지: 로고 먼저 보여줌
+      logoLoader.classList.add('show');
+  
+      setTimeout(() => {
+        // 로고 사라지기
+        logoLoader.classList.remove('show');
+        logoLoader.classList.add('hide');
+  
+        // 본문 fade-in
+        body.classList.add('fade-in');
+  
+        // 애니메이션 끝난 후 DOM에서 제거 (선택사항)
+      
+      }, 1500); // 로고 보여주는 시간
+    } else {
+      // 그 외 페이지는 바로 fade-in
       requestAnimationFrame(() => {
         body.classList.add('fade-in');
       });
     }
+
+
+
+
+
+
     // ✅ header 삽입 후 드롭다운, 메뉴 버튼 이벤트 초기화
     fetch('assets/includes/header.html')
         .then(res => res.text())
