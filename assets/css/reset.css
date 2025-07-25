@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
 
 body.page-fade {
     opacity: 0;
-    transition: opacity 2s ease;
+    transition: opacity 1.5s ease;
 }
 
 body.page-fade.fade-in {
