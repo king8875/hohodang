@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
         // 필요시 로고 DOM 제거
         // logoLoader.remove();
-      }, 1000); // 로고 보여주는 시간 (1초)
+      }, 2000); // 로고 보여주는 시간 (1초)
     } else {
       // 그 외 페이지는 바로 fade-in
       requestAnimationFrame(() => {
