@@ -314,7 +314,6 @@ main {
     display: flex;
     align-items: center;
     gap: 10px;
-    cursor: grab;
 }
 .store_link--btn p{
     position: relative;
