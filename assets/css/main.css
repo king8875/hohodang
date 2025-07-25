@@ -27,32 +27,33 @@ main {
     display: flex;
     align-items: flex-start;
 }
-.about_content.temp2{
-    margin-top: 80px;
-}
-.about_content.temp2 .big_menu--area{
-    visibility: hidden;
-}
-.about_content.temp2 .content--area{
-    flex: 1.6;
-}
 .big_menu--area{
     flex: 0.3;
 }
 .big_menu--area.project-fx{
     flex: 0.15;
 }
-.about_content.temp2 .big_menu--area{
-    flex: 0.3;
-}
-.about_content.temp2 .big_menu--area.project-fx{
-    flex: 0.15 !important;
-}
 .big_menu--area a{
     font-size: 18px;
     font-family: var(--hoho);
 }
 
+
+.about_content.temp2{
+    margin-top: 80px;
+}
+.about_content.temp2 .content--area{
+    flex: 1.6;
+}
+.about_content.temp2 .big_menu--area{
+    visibility: hidden;
+    flex: 0.3;
+}
+.about_content.temp2 .big_menu--area.project-fx{
+    flex: 0.15 !important;
+}
+
+/* submenu */
 .sub_menu--area{
     flex: 0.6;
 }
@@ -66,7 +67,7 @@ main {
 }
 .sub_menu--area .sub_menu--list li.active a{
     opacity: 1;
- }
+}
 .sub_menu--area .sub_menu--list li a{
     position: relative;
     font-size: 18px;
@@ -119,7 +120,6 @@ main {
 .content--area .company_tx{
     margin-bottom: 50px;
     font-size: 15px;
-    font-weight: var(--font-r);
 }
 .content--area .img--block{
     max-width: 800px;
@@ -317,12 +317,25 @@ main {
     cursor: grab;
 }
 .store_link--btn p{
+    position: relative;
     font-weight: var(--font-sb);
     font-size: 14px;
-    text-decoration: underline;
 }
 
-
+.store_link--btn p::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--primary-black);
+    transition: width 0.4s ease;
+}
+/* 애니메이션 넣고싶으면 */
+/* .store_link--btn p:hover::before {
+    width: 0;
+} */
 
 
 /* toke */
@@ -398,6 +411,7 @@ main {
     bottom: 20px;
     left: 20px;
     color: var(--primary-white);
+    z-index: 2;
 }
 .project--list .project--item .tx--block strong{
     font-weight: var(--font-sb);
@@ -411,13 +425,20 @@ main {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    z-index: 1;
+}
+.project--list .img--block{
+    overflow: hidden;
 }
 .project--list .img--block img{
     width: 100%;
     height: 100%;
+    transition: all .4s ease;
 }
 
-
+.project--item a:hover .img--block img{
+    transform: scale(1.1);
+}
 
 
 
@@ -543,6 +564,28 @@ main {
 .rc-tx p{
     font-size: 14px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:992px) {
 
     .visible{

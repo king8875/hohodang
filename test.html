@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: inherit;
+            font: inherit;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .tabs {
+            position: relative;
+        }
+
+        .tabs .tab-buttons {
+            display: flex;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .tabs .tab-buttons .tab-button {
+            padding: 10px;
+            border: 1px solid #000;
+            transition: all .4s ease;
+            
+        }
+
+        .tabs .tab-buttons .tab-button.is-active {
+            background: #fff;
+            mix-blend-mode: difference;
+        }
+
+        .tabs .tab-contents {
+        }
+
+        .tabs .tab-contents .tab-content {
+            position: relative;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: all .4s ease;
+        }
+
+        .tabs .tab-contents .tab-content.is-active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            position: relative;
+        }
+    </style>
+    <main>
+
+
+
+
+
+        <div class="tabs" data-tab-group>
+            <ul class="tab-buttons">
+                <li class="tab-button is-active" data-tab-target="tab1">탭 1</li>
+                <li class="tab-button" data-tab-target="tab2">탭 2</li>
+                <li class="tab-button" data-tab-target="tab3">탭 3</li>
+            </ul>
+
+            <div class="tab-contents">
+                <div class="tab-content is-active" data-tab-id="tab1">내용 1</div>
+                <div class="tab-content" data-tab-id="tab2">내용 2</div>
+                <div class="tab-content" data-tab-id="tab3">내용 3</div>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-tab-group]').forEach(tabGroup => {
+                const buttons = tabGroup.querySelectorAll('.tab-button');
+                const contents = tabGroup.querySelectorAll('.tab-content');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const target = button.getAttribute('data-tab-target');
+
+                        // 버튼 클래스 제어
+                        buttons.forEach(btn => btn.classList.remove('is-active'));
+                        button.classList.add('is-active');
+
+                        // 콘텐츠 클래스 제어
+                        contents.forEach(content => {
+                            const id = content.getAttribute('data-tab-id');
+                            content.classList.toggle('is-active', id === target);
+                        });
+                    });
+                });
+            });
+        })
+    </script>
+
+
+</body>
+
+</html>

@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // home 페이지가 아닐 때만 border-bottom 토글
         if (!body.classList.contains('home')) {
             if (headerContent) {
-                headerContent.style.borderBottom = open ? 'none' : '1px solid #000';
+                headerContent.style.borderBottom = open ? '1px solid #FAF9F5' : '1px solid #000';
             }
         }
     }

@@ -27,7 +27,6 @@
 button {
     background: none;
     border: 0;
-    cursor: pointer;
 }
 
 a {
@@ -56,6 +55,7 @@ svg {
     display: block;
     max-width: 100%;
     object-fit: cover;
+    box-sizing: border-box;
 }
 
 section {
