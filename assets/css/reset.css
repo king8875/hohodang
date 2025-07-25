@@ -96,11 +96,30 @@ body::-webkit-scrollbar {
 
 body.page-fade {
     opacity: 0;
-    transition: opacity 0.6s ease-in;
+    transition: opacity 0.4s ease;
 }
 
 body.page-fade.fade-in {
     opacity: 1;
+}
+
+/* 메인 로고 로더 스타일 */
+.main-logo-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.main-logo-loader.show {
+    opacity: 1;
+}
+.main-logo-loader.hide {
+    opacity: 0;
 }
 
 @media screen and (max-width:992px) {

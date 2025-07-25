@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
     const body = document.body;
+    
     // body에 home 클래스가 없으면 fade 애니메이션 적용
     if (!body.classList.contains('home')) {
       body.classList.add('page-fade');
@@ -13,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
         body.classList.add('fade-in');
       });
     }
-    
     // ✅ header 삽입 후 드롭다운, 메뉴 버튼 이벤트 초기화
     fetch('assets/includes/header.html')
         .then(res => res.text())
