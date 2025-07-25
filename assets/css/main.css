@@ -456,6 +456,7 @@ main {
     gap: 10px;
 }
 .stockist-tx{
+    margin-right: 50px;
     font-size: 16px;
     font-weight: var(--font-m);
 }
@@ -630,6 +631,12 @@ main {
     .timeline--list{
         gap: 10px;
         margin-bottom: 60px;
+    }
+    .timeline--list .tl--item .tl-tit{
+        font-size: 14px;
+    }
+    .timeline--list .tl--item .tl-hidden--block .tl-subtit{
+        font-size: 13px;
     }
     /* ceo */
     .content--area .ceo_img{
